@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!--优先使用 IE 最新版本和 Chrome-->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<!--百度禁止转码-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<!-- 搜索引擎抓取 -->
+		<meta name="robots" content="index,follow" />
+		<meta name="baidu-site-verification" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="renderer" content="webkit">
+		<!-- 为移动设备添加 viewport -->
+		<!--<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<!--禁止数字识自动别为电话号码-->
+		<meta content="telephone=no" name="format-detection">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/global.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/validate.css" />
+		<link rel="stylesheet" type="text/css" href="../js/layer/mobile/need/layer.css" />
+		<style>
+			#address {
+				border-radius: 2px;
+				border: solid 1px #dae3e0;
+				color: #999999;
+				font-size: .9rem;
+				text-indent: 2px;
+				outline: none;
+				text-align: left;
+				-webkit-appearance: none;
+				background: none;
+				width: 70%;
+				height: 60px;
+				padding: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="enter-content">
+			<form class="am-form am-form-horizontal flex flex-column" action="" id="form1">
+				<fieldset class="zform-fieldset">
+					<div class="base-info">
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="propertyName" class="label-title flex flex-row flex-centers"><span class="redicon">*</span><span>物业名称:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" name="companyname" id="propertyName" class="flex flex-box field-text enter-form-input" placeholder="2-20个字符" data-validate="propertyname" data-describedby="propertyname-description">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="linkman" class="label-title flex flex-row flex-centers"><span class="redicon">*</span><span>联系人:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" name="callname" id="linkman" class="flex flex-box field-text enter-form-input" placeholder="请输入联系人姓名" maxlength="4" data-validate="linkman" data-describedby="linkman-description">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="position" class="label-title flex flex-row flex-centers"><span class="redicon">*</span><span>职位:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" name="callposition" id="position" class="flex flex-box field-text enter-form-input" placeholder="请输入联系人职位" data-validate="position" data-describedby="position-description">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="tel" class="label-title flex flex-row flex-centers"><span class="redicon">*</span><span>联系电话:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" class="flex flex-box field-text enter-form-input" name="callno" id="tel" placeholder="请准确输入电话号码" maxlength="11" data-validate="tel" data-describedby="tel-description">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="area" class="label-title flex flex-row flex-centers"><span class="redicon">*</span><span>区域:</span></label>
+							<div class="input-div flex flex-box" style="position: relative">
+								<select class="flex  enter-form-input" name="areaname" id="area" data-validate="area" data-describedby="area-description" style="margin-right: 5px;">
+									<option class="flex">请选择区域</option>
+									<option value="渝北" class="flex">渝北</option>
+									<option value="江北" class="flex">江北</option>
+								</select>
+								<span ><img src="../image/down(1).png" width="8px" class="choose-down"></span>
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="address" class="label-title flex flex-row flex-centers"><span class="redicon">*</span><span>地址:</span></label>
+							<div class="flex flex-row flex-box flex-center">
+								<textarea name="address" id="address" data-validate="address" data-describedby="address-description" placeholder="请填写准确地址"></textarea>
+								<img src="../image/dw.png" width="18" height="20" style="margin-left: 8px">
+								<span class="dw-span">定位</span>
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label class="label-title flex flex-row flex-centers"><span class="redicon">*</span><span>照片:</span></label>
+							<div class="input-div flex flex-row">
+								<div id="fileList" class="flex flex-box flex-row flex-start flex-wrap">
+									<div id="addimg" class="flex flex-column flex-centerss addimg-div">
+										<img src="../image/add.png" style="width: 22px;height: 22px;padding-top: 7px;margin-bottom: 5px;">
+										<span class="addimg-title">添加照片</span>
+									</div>
+								</div>
+								<input type="file" id="fileElem" data-validate="fileElem" data-describedby="fileElem-description" multiple accept="image/*" onchange="handleFiles(this)" style="display: none">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="occupancyrate" class="label-title flex flex-row flex-centers"><span class="icon">*</span><span>入住率:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" class="flex flex-box enter-form-input" name="jionrate" id="occupancyrate" placeholder="(如：95%填“95”)">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="percount" class="label-title flex flex-row flex-centers"><span class="icon">*</span><span>人数:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="number" class="flex flex-box enter-form-input" name="personcount" id="percount" placeholder="请填写覆盖人数">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="ban" class="label-title flex flex-row flex-centers">
+								<span class="icon">*</span><span>楼栋:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" class="flex flex-box enter-form-input" name="building" id="ban" placeholder="请输入楼栋号">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="unit" class="label-title flex flex-row flex-centers"><span class="icon">*</span><span>单元:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" class="flex flex-box enter-form-input" name="unit" id="unit" placeholder="请输入单元">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="advertisposition" class="label-title flex flex-row flex-centers"><span class="icon">*</span><span>广告位:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" class="flex flex-box enter-form-input" name="adqw" id="advertisposition" placeholder="请输入广告位数量">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="rent" class="label-title flex flex-row flex-centers"><span class="icon">*</span><span>租金:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" class="flex flex-box enter-form-input" name="rentinfo" id="rent" placeholder="请填写写字楼租金">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="checkinfo" class="label-title flex flex-row flex-centers"><span class="icon">*</span><span>入住情况:</span></label>
+							<div class="input-div flex flex-box">
+								<textarea class="flex flex-box enter-form-input" name="incase" id="checkinfo" placeholder="请填写入驻企业信息及消费情况"></textarea>
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers">
+							<label for="environment" class="label-title flex flex-row flex-centers"><span class="icon">*</span><span>周围环境:</span></label>
+							<div class="input-div flex flex-box">
+								<textarea class="flex flex-box enter-form-input" name="arountinfo" id="environment" placeholder="请描述周围环境"></textarea>
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers" style="border-bottom: none">
+							<label for="lasttime" class="label-title flex flex-row flex-centers"><span class="icon">*</span><span>加班情况:</span></label>
+							<div class="input-div flex flex-box">
+								<input type="text" id="lasttime" name="overtimeinfo" class="flex flex-box enter-form-input" placeholder="请填写最晚下班时间">
+							</div>
+						</div>
+						<div class="am-form-group flex flex-row flex-centers" style="border-bottom: none">
+							<label for="state" class="label-title flex flex-row flex-centers"><span class="redicon">*</span><span>状态:</span></label>
+							<div class="input-div flex flex-box" style="position: relative">
+								<select class="flex  enter-form-input" name="state" data-required="true" id="state" data-descriptions="state">
+									<option class="flex">请选择状态</option>
+									<option value="1" class="flex">可跟进</option>
+									<option value="2" class="flex">跟进中</option>
+									<option value="3" class="flex">已谈定</option>
+									<option value="4" class="flex">已签单</option>
+									<option value="5" class="flex">已放弃</option>
+								</select>
+								<span ><img src="../image/down(1).png" width="8px" class="choose-down"></span>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<input type="submit" value="提交报名" class="submit">
+			</form>
+			<div id="allmap"></div>
+		</div>
+		<script src="http://api.map.baidu.com/api?v=2.0&ak=Bkt35L4KBEfD3sYqzWIAXEZpuXdkHGNu" type="text/javascript" charset="utf-8"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript " src="../js/jquery.min.js "></script>
+		<script type="text/javascript " src="../js/jquery-mvalidate.js "></script>
+		<script type="text/javascript " src="../js/city.js"></script>
+		<script type="text/javascript " src="../js/picker.min.js"></script>
+		<script type="text/javascript " src="../js/layer/layer.js"></script>
+		<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=秘钥"></script>-->
+		<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+		<script>
+			window.URL = window.URL || window.webkitURL;
+			var fileElem = document.getElementById("fileElem"),
+				fileList = document.getElementById("fileList"),
+				addimg = document.getElementById("addimg");
+
+			function handleFiles(obj) {
+				var files = obj.files,
+					img = new Image();
+				//base64
+				if(window.FileReader) {
+					var reader = new FileReader();
+					reader.readAsDataURL(files[0]);
+					reader.onload = function(e) {
+						$.ajax({
+							url: 'https://pay.51byod.cn/PayWeiXinMobile/SDPreStoreAuth/Getupload',
+							type: 'post',
+							data: img.src,
+							success: function(data) {
+								img.src = this.result;
+								img.width = 60;
+								img.height = 60;
+								fileList.insertBefore(img, addimg);
+							}
+						})
+					}
+				}
+				//blob格式
+				else if(window.URL) {
+					img.src = window.URL.createObjectURL(files[0]);
+					img.width = 60;
+					img.height = 60;
+					img.onload = function(e) {
+						window.URL.revokeObjectURL(this.src);
+					}
+					fileList.insertBefore(img, addimg);
+				} else {
+					//ie 图片上传
+					obj.select();
+					obj.blur();
+					var nfile = document.selection.createRange().text;
+					document.selection.empty();
+					img.src = nfile;
+					img.onload = function() {
+						console.log(nfile + "," + img.fileSize + " bytes");
+					}
+					fileList.insertBefore(img, addimg);
+				}
+			}
+			//form表单赋值
+			$.extend({
+				setForm: function(frm, jsonValue) {
+					var obj = $(frm);
+					$.each(jsonValue, function(name, ival) {
+						var $oinput = obj.find("input[name=" + name + "]");
+						if($oinput.attr("type") == "textarea") { // 多行文本框
+							obj.find("[name=" + name + "]").html(ival);
+						} else if($oinput.attr("type") == "select") {
+
+						} else {
+							obj.find("[name=" + name + "]").val(ival);
+						}
+					});
+				},
+			});
+			var datsd = {
+				companyname: '的说法是否是',
+				callname: '但是发生',
+				incase: '范德萨发送打法撒范德萨发送打法撒打法撒大范德萨发送打法撒打法撒大打法撒大'
+			}
+			$.setForm('#form1', datsd);
+			$(function() {
+			    console.log("ad")
+			    //选择框触礁事件
+				$("#area,#state").focus(function () {
+					$(".choose-down").css('transform','rotateX(180deg)')
+                })
+				$("#area,#state").on("change",function () {
+                    $(".choose-down").css('transform','rotateX(0deg)')
+                })
+				$(".addimg-div").on("click", function() {
+					document.getElementById('fileElem').click()
+				})
+				$.mvalidateExtend({
+					propertyname: {
+						required: true,
+						each: function() {},
+						descriptions: {
+							required: '<div class="field-invalidmsg">请输入物业名称</div>',
+							pattern: '<div class="field-invalidmsg">请输入正确的物业名称</div>',
+							valid: '<div class="field-validmsg">正确</div>'
+						}
+					},
+					linkman: {
+						required: true,
+						pattern: /[\u4E00-\u9FA5]{2,4}/,
+						each: function() {},
+						descriptions: {
+							required: '<div class="field-invalidmsg">请输入联系人姓名</div>',
+							pattern: '<div class="field-invalidmsg">请输入正确的联系人姓名</div>',
+							valid: '<div class="field-validmsg">正确</div>'
+						}
+					},
+					position: {
+						required: true,
+						each: function() {},
+						descriptions: {
+							required: '<div class="field-invalidmsg">请输入职位</div>',
+							pattern: '<div class="field-invalidmsg">请输入正确的职位</div>',
+							valid: '<div class="field-validmsg">正确</div>'
+						}
+					},
+					tel: {
+						required: true,
+						pattern: /^0?1[3|4|5|7|8][0-9]\d{8}$/,
+						each: function() {},
+						descriptions: {
+							required: '<div class="field-invalidmsg">请输入联系人手机号码</div>',
+							pattern: '<div class="field-invalidmsg">手机号码格式不正确</div>',
+							valid: '<div class="field-validmsg">正确</div>'
+						}
+					},
+					area: {
+						required: true,
+						each: function() {},
+						descriptions: {
+							required: '<div class="field-invalidmsg">请选择区域</div>',
+							valid: '<div class="field-validmsg">正确</div>'
+						}
+					},
+					street: {
+						required: true,
+						each: function() {},
+						descriptions: {
+							required: '<div class="field-invalidmsg">请选择街道</div>',
+							valid: '<div class="field-validmsg">正确</div>'
+						}
+					},
+					address: {
+						required: true,
+						each: function() {},
+						descriptions: {
+							required: '<div class="field-invalidmsg">请输入准确地址</div>',
+							valid: '<div class="field-validmsg">正确</div>'
+						}
+					},
+					fileElem: {
+						required: true,
+						each: function() {},
+						descriptions: {
+							required: '<div class="field-invalidmsg">请添加图片</div>',
+							valid: '<div class="field-validmsg">正确</div>'
+						}
+					}
+				});
+				$("#form1").mvalidate({
+					type: 1,
+					onKeyup: true,
+					sendForm: true,
+					firstInvalidFocus: true,
+					valid: function(event, options) {
+						$.ajax({
+							url: '',
+							type: 'post',
+							data: '',
+							success: function(data) {}
+						})
+						var imgsdata = $("#fileList>img");
+						var imglist = [];
+						for(var i = 0; i < imgsdata.length; i++) {
+							imglist.push(imgsdata[i].src)
+						}
+						console.info($("form").serializeArray(), imglist)
+						event.preventDefault();
+					},
+				});
+				//点击定位
+				$(".dw-span").on("click", function() {
+					var map = new BMap.Map("allmap");
+					var longitude, latitude;
+					navigator.geolocation.getCurrentPosition(function(position) {
+						longitude = position.coords.longitude;
+						latitude = position.coords.latitude;
+					});
+					setTimeout(function() {
+						var gpsPoint = new BMap.Point(longitude, latitude);
+						BMap.Convertor.translate(gpsPoint, 0, function(point) {
+							var geoc = new BMap.Geocoder();
+							geoc.getLocation(point, function(rs) {
+								var addComp = rs.addressComponents;
+								alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+							});
+						});
+					}, 3000);
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

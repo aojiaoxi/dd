@@ -1,0 +1,484 @@
+<!--活动申请页面-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--优先使用 IE 最新版本和 Chrome-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <!--百度禁止转码-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow" />
+    <meta name="baidu-site-verification" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!-- 为移动设备添加 viewport -->
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--禁止数字识自动别为电话号码-->
+    <meta content="telephone=no" name="format-detection">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/validate.css" />
+    <link rel="stylesheet" type="text/css" href="../js/layer/mobile/need/layer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/menudown.css" />
+    <link rel="stylesheet" href="../css/minirefresh.min.css">
+</head>
+
+<body>
+<div class="index-count">
+    <div class="heder">
+        <p class="header-insert">
+            <img src="../image/searchicon.png" class="searchicon" />
+            <input type="text" name="" id="searchbox" value="" placeholder="搜索物业" placeholder-color="#ccc" />
+            <img src="../image/addiimg.png" class="addiimg" />
+            <span class="reset">取消</span>
+        </p>
+    </div>
+    <div class="index-search">
+        <dl class="topmenu">
+            <dt>
+            <div class="selectlist">
+                <div class="select_textdiv flex flex-row flex-center">
+                    <input type="hidden" value=""/>
+                    <p class="s_text">状态</p>
+                    <span class="down">
+                        <img src="../image/down(1).png">
+                    </span>
+                </div>
+                <div class="select_textul">
+                    <ul class="select_first_ul">
+                        <li class="focus">
+                            <p>全部</p>
+                        </li>
+                        <li>
+                            <p>可跟进</p>
+                        </li>
+                        <li>
+                            <p>跟进中</p>
+                        </li>
+                        <li>
+                            <p>已谈定</p>
+                        </li>
+                        <li>
+                            <p>已签单</p>
+                        </li>
+                        <li>
+                            <p>已放弃</p>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            </dt>
+            <dt>
+            <div class="selectlist">
+                <div class="select_textdiv flex flex-row flex-center">
+                    <input type="hidden" value=""/>
+                    <p class="s_text">区域</p>
+                    <span class="down">
+                        <img src="../image/down(1).png">
+                    </span>
+                </div>
+                <div class="select_textul">
+                    <ul class="select_first_ul" id="areaul">
+                        <li class="focus"><p>全部</p></li>
+                        <li><p>渝中区</p></li>
+                        <li><p>沙坪坝</p></li>
+                        <li><p>渝北区</p></li>
+                        <li><p>巴南区</p></li>
+                        <li><p>九龙坡</p></li>
+                        <li><p>北碚区</p></li>
+                        <li><p>大渡口</p></li>
+                        <li><p>渝北区</p></li>
+                        <li><p>江北区</p></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+            </dt>
+            <dt>
+            <div class="selectlist">
+                <div class="select_textdiv flex flex-row flex-center">
+                    <input type="hidden" value=""/>
+                    <p class="s_text">入住率</p>
+                    <span class="down">
+                        <img src="../image/down(1).png">
+                    </span>
+                </div>
+                <div class="select_textul">
+                    <ul class="select_first_ul">
+                        <li class="focus">
+                            <p>全部</p>
+                        </li>
+                        <li>
+                            <p>90%-100%</p>
+                        </li>
+                        <li>
+                            <p>80%-90%</p>
+                        </li>
+                        <li>
+                            <p>70%-80%</p>
+                        </li>
+                        <li>
+                            <p>60%-70%</p>
+                        </li>
+                        <li>
+                            <p>60%以下</p>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            </dt>
+            <div class="clearfix"></div>
+        </dl>
+    </div>
+
+
+    <div id="minirefresh" class="minirefresh-wrap">
+        <div class="minirefresh-scroll">
+            <ul class="data-list" id="listdata">
+                <div class="wy-lits flex flex-column" >
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="storylist">
+        <p class="storylist-item">
+            <span class="storylist-title">历史搜索</span>
+            <img src="../image/remove.png" class="removerimg" />
+        </p>
+    </div>
+</div>
+<script src="../js/minirefresh.min.js"></script>
+<script src="../js/city.js"></script>
+<script type="text/javascript " src="../js/jquery.min.js "></script>
+<script type="text/javascript " src="../js/datePicker.js "></script>
+<script type="text/javascript " src="../js/jquery-mvalidate.js "></script>
+<script type="text/javascript " src="../js/picker.min.js"></script>
+<script type="text/javascript " src="../js/layer/layer.js"></script>
+<script type="text/javascript " src="../js/menudown.js"></script>
+
+<script>
+    var wylist = [];
+    var searchname = '';
+    var area = ''; //	string	是	区域名称模糊查询
+    var street = ''; //
+    var state = ''; //	string	是	状态
+    var joingread = ''; // string 是 入住率(1： 90 - 100， 2： 80 - 90， 3： 70 - 80， 4； 60 - 70， 5 < 60)
+    var pagesize = 10; // string 是 每页大小
+    var pageindex = 0; // string 是 当前页
+    var postdata = {
+        searchname: searchname,
+        area: area,
+        state: state,
+        joingread: joingread,
+        pagesize: pagesize,
+        pageindex: pageindex,
+    }
+    $(function() {
+        getsslsList();
+        getlist(postdata);
+//        $(".area-first-ul > li").on("click",function () {
+//            $(this).addClass("focus");
+//            $(this).siblings("li").removeClass("focus")
+//            area =  $(this).find("p").text();
+//            postdata.area =area
+//            var shtml ="";
+//            switch (area)
+//            {
+//                case "渝中区":
+//                    for(var i = 0;i<yzlist.length;i++){
+//                        shtml += "<li>"+yzlist[i]+"</li>"
+//                    }
+//
+//                    break;
+//                case "渝北区":
+//                    for(var i = 0;i<yblist.length;i++){
+//                        shtml += "<li>"+yblist[i]+"</li>"
+//                    }
+//                    break;
+//                default:
+//            }
+//            $(".area-ul").html(shtml)
+//            //选择街道
+//            $(".area-ul > li").unbind("click").on("click",function () {
+//                $(this).addClass("focusli").siblings("li").removeClass("focusli");
+//                street = $(this).text();
+//                console.log(street)
+//                postdata.street = street;
+//                getlist(postdata);
+//                $(".area-ul").css({
+//                    display:"none"
+//                })
+//                $(".area-first-ul").css({
+//                    display:"none"
+//                })
+//                $(this).parent("ul").siblings('ul').parent("div").siblings('div').children('.down').children().css('transform','rotateX(0deg)')
+//
+//            })
+//
+//        })
+    })
+    //物业列表
+    //			function getWyList(para) {
+    //				$.ajax({
+    //					url: '../json/wylist.json', //请求地址
+    //					type: 'get', //GET
+    //					async: true, //或false,是否异步
+    //					data: "",
+    //					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+    //					success: function(res) {
+    //						if (res.code == 0) {
+    //							wylist = res.data.list;
+    //							if (wylist.length > 0) {
+    //								var html = "";
+    //								for (var i = 0; i < wylist.length; i++) {
+    //									html += "<div class='wy-item flex flex-row flex-start flex-centers'>" +
+    //										"<div>" +
+    //										"<img src='../image/demo.png' class='infoimg'>" +
+    //										"</div>" +
+    //										"<div class='wy-item-info flex flex-column'>" +
+    //										"<span class='flex flex-row flex-centerss item-info-span'>" +
+    //										"<span class='wy-item-name'>物业名称:</span>" +
+    //										"<span class='wy-info-title'>" + wylist[i].companyName + "</span>" +
+    //										"</span>" +
+    //										"<span class='flex flex-row flex-centerss item-info-span'>" +
+    //										"<span class='wy-item-name'>所属区域:</span>" +
+    //										"<span class='wy-info-title'>" + wylist[i].areaName + "</span>" +
+    //										"</span>" +
+    //										"<span class='flex flex-row flex-centerss item-info-span'>" +
+    //										"<span class='wy-item-name'>状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态:</span>" +
+    //										"<span class='wy-info-title'>跟进中</span>" +
+    //										"</span>" +
+    //										"<span class='flex flex-row flex-centerss item-info-span' style='margin-bottom: 0px;'>" +
+    //										"<span class='wy-item-name'>更新时间:</span>" +
+    //										"<span class='wy-info-title'>" + wylist[i].upTime + "</span>" +
+    //										"</span>" +
+    //										"</div>" +
+    //										"<img src='../image/readinfo.png' class='readmore'>" +
+    //										"</div></div>"
+    //								}
+    //								$(".wy-lits").append(html);
+    //								//查看详情
+    //								$(".readmore").on("click", function() {
+    //									self.location = 'info.html';
+    //								})
+    //							} else {
+    //								layer.msg("暂无数据");
+    //							}
+    //							//							layer.msg("获取成功");
+    //						} else {
+    //							layer.msg("获取失败");
+    //						}
+    //					},
+    //					error: function(res) {
+    //						layer.msg("加载失败");
+    //					},
+    //				})
+    //			}
+    //搜索历史列表
+    function getsslsList(para) {
+        $.ajax({
+            url: '../json/ssls.json', //请求地址
+            type: 'get', //GET
+            async: true, //或false,是否异步
+            data: "",
+            dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+            success: function(res) {
+                if (res.code == 0) {
+                    var list = res.data
+                    if (list.length > 0) {
+                        var html = "";
+                        for (var i = 0; i < list.length; i++) {
+                            html += '<h6 class="storylist-item storytitle">' + list[i] + '</h6>'
+                        }
+                        $(".storylist").append(html)
+                    }
+                }
+            },
+            error: function(res) {
+                layer.msg("加载失败");
+            },
+        })
+    }
+    //删除搜索历史
+    $(".removerimg").click(function() {
+        $.ajax({
+            url: '../json/remove.json', //请求地址
+            type: 'get', //GET
+            async: true, //或false,是否异步
+            data: "",
+            dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+            success: function(res) {
+                if (res.code == 0) {
+                    layer.msg(res.msg);
+                    //重新搜索数据
+                }
+            },
+            error: function(res) {
+                layer.msg("删除失败");
+            },
+        })
+    })
+    //搜索框
+    $("#searchbox").focus(function() {
+        $(".addiimg").hide();
+        $(".reset").show();
+        $(".search-icon").show();
+        $(".storylist").show();
+        $('.storylist .storytitle').unbind('click').on('click', function() {
+            $("#searchbox").val($(this).text());
+            var searchname =$("#searchbox").val()
+            postdata.searchname = searchname
+            getlist(postdata);
+        })
+    })
+    //搜索取消事件
+    $(".reset").on("click",function () {
+        $(".addiimg").show();
+        $(".reset").hide();
+        $(".storylist").hide();
+    })
+    //输入框的查寻事件
+    $("#searchbox").blur(function () {
+        var value = $(this).val();
+        postdata.searchname = value;
+        getlist(postdata)
+    })
+
+    //获取数据
+    function getlist(para) {
+        var miniRefresh = new MiniRefresh({
+            container: '#minirefresh',
+            down: {
+                //isLock: true,//是否禁用下拉刷新
+                callback: function() {
+                    doAjax('down');
+                }
+            },
+            up: {
+                isAuto: true,
+                callback: function() {
+                    doAjax('up');
+                }
+            }
+        });
+        var doAjax = function(downOrUp) {
+            if (downOrUp == 'down') {
+                pageindex = 0; // 下拉刷新页码设置
+            } else {
+                if (pageindex == 0) {
+                    pageindex = 0
+                }
+            }
+            $.ajax({
+                url: '../json/wylist.json', // 请求网址
+                type: 'get',
+                data: para,
+                success: function(response) {
+                    if(response.code == 0){
+                        $(".addiimg").show();
+                        $(".reset").hide();
+                        $(".storylist").hide();
+                    var wylist = response.data.list;
+                    if ( wylist.length > 0) {
+                        var html = '';
+                        for (var i = 0; i < wylist.length; i++) {
+                            var gjhtml = "";
+                            var state = wylist[i].state;
+                            switch(state)
+                            {
+                                case 2:
+                                    gjhtml = "<span class='wy-info-title' style='color: #fc7676;'>跟进中</span>"
+                                    break;
+                                case 3:
+                                    gjhtml = "<span class='wy-info-title' style='color: #519cf8;'>已谈定</span>"
+                                    break;
+                                case 4:
+                                    gjhtml = "<span class='wy-info-title' style='color: #49be64;'>已签单</span>"
+                                    break;
+                                case 5:
+                                    gjhtml = "<span class='wy-info-title' style='color: #999999;'>已放弃</span>"
+                                    break;
+                                case 1:
+                                    gjhtml = "<span class='wy-info-title' style='color: #fca23a;'>可跟进</span>"
+                                    break;
+                                default:
+                            }
+                            html += "<div class='wy-item flex flex-row flex-start flex-centers'>" +
+                                "<div>" +
+                                "<img src='../image/demo.png' class='infoimg'>" +
+                                "</div>" +
+                                "<div class='wy-item-info flex flex-column'>" +
+                                "<span class='flex flex-row flex-centerss item-info-span'>" +
+                                "<span class='wy-item-name'>物业名称:</span>" +
+                                "<span class='wy-info-title'>" + wylist[i].companyName + "</span>" +
+                                "</span>" +
+                                "<span class='flex flex-row flex-centerss item-info-span'>" +
+                                "<span class='wy-item-name'>所属区域:</span>" +
+                                "<span class='wy-info-title'>" + wylist[i].areaName + "</span>" +
+                                "</span>" +
+                                "<span class='flex flex-row flex-centerss item-info-span'>" +
+                                "<span class='wy-item-name'>状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态:</span>" +gjhtml+
+
+                                "</span>" +
+                                "<span class='flex flex-row flex-centerss item-info-span' style='margin-bottom: 0px;'>" +
+                                "<span class='wy-item-name'>更新时间:</span>" +
+                                "<span class='wy-info-title'>" + wylist[i].upTime + "</span>" +
+                                "</span>" +
+                                "</div>" +
+                                "<a href='info.html?id="+wylist[i].id+"'><img src='../image/readinfo.png' class='readmore'></a>" +
+                                "</div></div>";
+                        };
+                        pageindex++;
+                        if (downOrUp == 'down') {
+                            $('.wy-lits').html('');
+                            $('.wy-lits').append(html);// DOM 插入数据
+                            miniRefresh.endDownLoading(true);// 结束下拉刷新
+                        } else {
+                            $('.wy-lits').append(html);
+                            if (response.data.pagejson.pagecount == pageindex) {// 是否已取完数据页
+                                miniRefresh.endUpLoading(true);// 结束上拉加载
+                            } else {
+                                miniRefresh.endUpLoading(false);
+                            }
+                        }
+
+                    } else if ( wylist.length == 0){
+//                        if (downOrUp == 'down') {
+//                            $('.wy-lits').html('');
+//                            miniRefresh.endDownLoading(true);
+//                        } else {
+                            miniRefresh.endUpLoading(true);
+//                        }
+                        $('.wy-lits').html('<span class="zwsj">暂无数据</span>');
+                    }
+                    }
+                },
+                error: function() {
+                    //请求失败 停止刷新
+                    if (downOrUp == 'down') {
+                        $('.wy-lits').html('');
+                        miniRefresh.endDownLoading(true);
+                    } else {
+                        miniRefresh.endUpLoading(true);
+                    }
+                }
+            });
+        };
+    }
+</script>
+</body>
+
+</html>

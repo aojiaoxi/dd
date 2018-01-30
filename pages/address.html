@@ -1,0 +1,161 @@
+<!--填写收货地址页面-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--优先使用 IE 最新版本和 Chrome-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <!--百度禁止转码-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow" />
+    <meta name="baidu-site-verification" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!-- 为移动设备添加 viewport -->
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--禁止数字识自动别为电话号码-->
+    <meta content="telephone=no" name="format-detection">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>跟进填写</title>
+    <link rel="stylesheet" type="text/css" href="../css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/validate.css" />
+    <link rel="stylesheet" type="text/css" href="../js/layer/mobile/need/layer.css" />
+</head>
+<body>
+    <div class="address-content">
+        <form class="am-form am-form-horizontal flex flex-column" action="#" id="form1">
+            <fieldset class="zform-fieldset">
+                <div class="address-info">
+                    <!--<div class="am-form-group1 flex flex-row flex-centers">-->
+                        <!--<label for="receiver" class="label-title">姓名:</label>-->
+                        <!--<div class="input-div flex ">-->
+                            <!--<input type="text" id="receiver" class="flex  field-text form-input" placeholder="请填写您的姓名"   data-validate="name" data-describedby="name-description">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="am-form-group1 flex flex-row flex-centers">-->
+                        <!--<label for="tel" class="label-title">联系电话:</label>-->
+                        <!--<div class="input-div flex flex-box">-->
+                            <!--<input type="text" class="flex  field-text form-input" id="tel" placeholder="请填写您的联系电话" maxlength="11" data-validate="phone" data-describedby="phone-description">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="am-form-group1 flex flex-row flex-centers">
+                        <label for="state" class="label-title">状态:</label>
+                        <div class="input-div flex flex-box" style="position: relative">
+                            <!--<input type="text" id="shopid" class="flex flex-box form-input" placeholder="" data-required="true" data-descriptions="shopid">-->
+                            <select class="flex  form-input" data-required="true" id="state" data-descriptions="state">
+                                <option value="">请选择状态</option>
+                                <option value="1" class="flex">可跟进</option>
+                                <option value="2"  class="flex">跟进中</option>
+                                <option value="3"  class="flex">已谈定</option>
+                                <option value="4" class="flex">已签单</option>
+                                <option value="5" class="flex">已放弃</option>
+                            </select>
+                            <span ><img src="../image/down(1).png" width="8px" class="choose-down"></span>
+                        </div>
+                    </div>
+                    <div class="am-form-group1 flex flex-column" style="border-bottom: none">
+                        <label for="remark" class="label-title">情况描述:</label>
+                        <div class="input-div flex flex-box" style="width: 100%">
+                            <textarea type="text" id="remark" class="flex flex-box remark-text" placeholder="请描述跟进情况" data-required="true" data-descriptions="remark"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row flex-center loading-div">
+                    <img src="../image/enter/loading.gif" width="15%">
+                </div>
+            </fieldset>
+            <input type="submit"  value="提交" class="address-submit">
+        </form>
+    </div>
+    <script type="text/javascript " src="../js/jquery.min.js "></script>
+    <script type="text/javascript " src="../js/datePicker.js "></script>
+    <script type="text/javascript " src="../js/jquery-mvalidate.js "></script>
+    <script type="text/javascript " src="../js/layer/layer.js"></script>
+    <script>
+        $(function () {
+            $("#state").focus(function () {
+                $(".choose-down").css('transform','rotateX(180deg)')
+            })
+            $("#state").on("change",function () {
+                $(".choose-down").css('transform','rotateX(0deg)')
+            })
+//            $.mvalidateExtend({
+//                name: {
+//                    required: true,
+//                    pattern: /[\u4E00-\u9FA5]{2,4}/,
+//                    each: function () {
+//                    },
+//                    descriptions: {
+//                        required: '<div class="field-invalidmsg">请输入您的姓名</div>',
+//                        pattern: '<div class="field-invalidmsg">请输入正确的姓名</div>',
+//                        valid: '<div class="field-validmsg">正确</div>'
+//                    }
+//                },
+//                phone: {
+//                    required: true,
+//                    pattern: /^0?1[3|4|5|8][0-9]\d{8}$/,
+//                    each: function () {
+//                    },
+//                    descriptions: {
+//                        required: '<div class="field-invalidmsg">请输入你的手机号码</div>',
+//                        pattern: '<div class="field-invalidmsg">手机号码格式不正确</div>',
+//                        valid: '<div class="field-validmsg">正确</div>'
+//                    }
+//                }
+//            });
+            $("#form1").mvalidate({
+                type: 1,
+                onKeyup: true,
+                sendForm: true,
+                firstInvalidFocus: false,
+                valid: function (event, options) {
+                    var para = {
+                        remark:$("#remark").val().trim(),
+                        state:$("#state option:selected").val(),
+                        prestoreid:"",//物业id
+                        roleid:"",//人员id
+                    };
+                    $(".loading-div").css({
+                        visibility:'visible'
+                    })
+                    $.ajax({
+                        url: '',//请求地址
+                        type: 'POST', //GET
+                        async: true,    //或false,是否异步
+                        data: para,
+                        dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+                        success: function (res) {
+                            if(res.code == 0){
+                                //提示信息
+                                layer.msg('添加成功!');
+                            }
+                        },
+                        error: function (res) {
+                            layer.msg('添加失败!');
+                        },
+
+                    })
+
+                },
+                descriptions: {
+                    state: {
+                        required: '请选择状态'
+                    },
+                    remark: {
+                        required: '请填写跟进情况',
+                    },
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

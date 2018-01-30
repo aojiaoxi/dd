@@ -1,0 +1,94 @@
+{
+  "code":0,
+  "msg":"获取成功",
+  "data":{
+    "list":[
+      {
+        "id":1,
+        "companyName":"U创空间123213发送到发疯发生大",
+        "areaName":"沙坪坝",
+        "state":3,
+        "upTime":"2018.01.24 13:13",
+        "headImg":"20180118/636518910167724537.png"
+      },
+      {
+        "id":2,
+        "companyName":"df发斯蒂芬是否第三方赛地方啥地方撒旦",
+        "areaName":"渝北区",
+        "state":5,
+        "upTime":"2018.01.20 15:55",
+        "headImg":"20180118/636518931303333425.png"
+      },
+      {
+        "id":3,
+        "companyName":"测试",
+        "areaName":"沙坪坝",
+        "state":4,
+        "upTime":"2018.01.24 13:13",
+        "headImg":"20180118/636518910167724537.png"
+      },
+      {
+        "id":4,
+        "companyName":"刚发的",
+        "areaName":"九龙坡",
+        "state":0,
+        "upTime":"2018.01.20 15:53",
+        "headImg":"20180118/636518941160287211.png"
+      },
+      {
+        "id":5,
+        "companyName":"U创空间123213发送到发疯发生大",
+        "areaName":"沙坪坝",
+        "state":3,
+        "upTime":"2018.01.24 13:13",
+        "headImg":"20180118/636518910167724537.png"
+      },
+      {
+        "id":6,
+        "companyName":"df发斯蒂芬是否第三方赛地方啥地方撒旦",
+        "areaName":"渝北区",
+        "state":5,
+        "upTime":"2018.01.20 15:55",
+        "headImg":"20180118/636518931303333425.png"
+      },
+      {
+        "id":7,
+        "companyName":"测试",
+        "areaName":"沙坪坝",
+        "state":4,
+        "upTime":"2018.01.24 13:13",
+        "headImg":"20180118/636518910167724537.png"
+      },
+      {
+        "id":8,
+        "companyName":"刚发的",
+        "areaName":"九龙坡",
+        "state":0,
+        "upTime":"2018.01.20 15:53",
+        "headImg":"20180118/636518941160287211.png"
+      },
+      {
+        "id":9,
+        "companyName":"U创空间123213发送到发疯发生大",
+        "areaName":"沙坪坝",
+        "state":3,
+        "upTime":"2018.01.24 13:13",
+        "headImg":"20180118/636518910167724537.png"
+      },
+      {
+        "id":10,
+        "companyName":"df发斯蒂芬是否第三方赛地方啥地方撒旦",
+        "areaName":"渝北区",
+        "state":5,
+        "upTime":"2018.01.20 15:55",
+        "headImg":"20180118/636518931303333425.png"
+      }
+    ],
+    "pagejson":{
+      "pagesize":10,
+      "pagecount":2,
+      "pageindex":0,
+      "totalcount":12
+    }
+  }
+}

@@ -1,0 +1,245 @@
+<!--活动申请页面-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--优先使用 IE 最新版本和 Chrome-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <!--百度禁止转码-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow" />
+    <meta name="baidu-site-verification" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!-- 为移动设备添加 viewport -->
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--禁止数字识自动别为电话号码-->
+    <meta content="telephone=no" name="format-detection">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>物业详情</title>
+    <link rel="stylesheet" type="text/css" href="../css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/validate.css" />
+    <link rel="stylesheet" type="text/css" href="../js/layer/mobile/need/layer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css" />
+</head>
+<body>
+    <div class="info-div">
+        <div class="info-header">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" style="padding-left: 0px">
+                    <!--<div class="swiper-slide">-->
+                        <!--<img src="../image/demo1.jpg" class="info-banner-img">-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<img src="../image/demo2.jpg" class="info-banner-img">-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<img src="../image/demo3.jpg" class="info-banner-img">-->
+                    <!--</div>-->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="info-content">
+            <div class="info-content-name flex flex-column">
+                <div class="flex flex-row flex-space flex-centerss">
+                    <span class="flex flex-row flex-centerss">
+                             <span class="address-name" id="address-name">U创空间</span>
+                             <span class="address-state" id="address-state">跟进中</span>
+                    </span>
+                    <span> <a href="enter.html?id=0"><img src="../image/edit.png" class="edit-icon"></a></span>
+                </div>
+                <div class="flex flex-row flex-start flex-centerss"><span><img src="../image/dw-icon.png" class="dw-icon"></span><span class="address-title" id="address-title">重庆市江北区五江路18号工业设计中心</span></div>
+            </div>
+            <div class="info-content-linkman flex flex-column">
+                <div class="flex flex-row flex-space flex-centerss"><span class="link-name" id="link-name">陈静 (经理)</span></div>
+                <div class="flex flex-row flex-space flex-centerss"><span class="link-phone" id="link-phone">136-3792-5557</span><span><a href="tel:18688888888" id="aphone"><img src="../image/phone-icon.png"  class="phone-icon"></a></span></div>
+            </div>
+            <div class="info-content-wy flex flex-column">
+                <div class="flex flex-row flex-start flex-centerss"><img src="../image/wy-icon.png" class="wy-icon"><span class="wy-title">物业信息</span></div>
+                <div class="flex flex-column wy-info">
+                   <div class="flex flex-row flex-space flex-centerss wy-info-list">
+                       <span class="wy-info-name">入住率:&nbsp;<span class="wy-info-value" id="rate">95%</span></span>
+                       <span class="wy-info-name">覆盖人数:&nbsp;<span class="wy-info-value" id="number">300-500人左右</span></span>
+                   </div>
+                    <div class="flex flex-row flex-space flex-centerss wy-info-list">
+                        <span class="wy-info-name">楼栋:&nbsp;<span class="wy-info-value" id="ban">4</span></span>
+                        <span class="wy-info-name">单元:&nbsp;<span class="wy-info-value" id="unit">1</span></span>
+                    </div>
+                    <div class="flex flex-row flex-space flex-centerss wy-info-list">
+                        <span class="wy-info-name">广告位:&nbsp;<span class="wy-info-value" id="ggw">暂无</span></span>
+                        <span class="wy-info-name">写字楼租金:&nbsp;<span class="wy-info-value" id="rent">暂无</span></span>
+                    </div>
+                    <div class="flex flex-row flex-space flex-centerss wy-info-list">
+                        <span class="wy-info-name" style="width: 100%">入驻情况:&nbsp;<span class="wy-info-value" id="occupancy">联合办公空间</span></span>
+                    </div>
+                    <div class="flex flex-row flex-space flex-centerss wy-info-list">
+                        <span class="wy-info-name" style="width: 100%">周围环境:&nbsp;<span class="wy-info-value" id="environmental">写字楼</span></span>
+                    </div>
+                    <div class="flex flex-row flex-space flex-centerss wy-info-list">
+                        <span class="wy-info-name" style="width: 100%">加班情况:&nbsp;<span class="wy-info-value" id="overtime">最晚晚上10：30左右下班</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="info-content-gj flex flex-column">
+                <div class="flex flex-row flex-start flex-centerss gj-title"><img src="../image/gj-icon.png" class="wy-icon"><span class="wy-title">跟进情况</span></div>
+                <div class="flex flex-column gj-info">
+                </div>
+                <div class="">
+                    <a href="address.html" class="gj-btn">继续跟进</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript " src="../js/jquery.min.js "></script>
+    <script type="text/javascript " src="../js/datePicker.js "></script>
+    <script type="text/javascript " src="../js/jquery-mvalidate.js "></script>
+    <script type="text/javascript " src="../js/layer/layer.js"></script>
+    <script type="text/javascript " src="../js/swiper-3.4.2.jquery.min.js"></script>
+    <script>
+        var infodata = {
+        }
+        var para= {
+            id:""
+        };
+        var paras= {
+            id:"",
+            pageindex:0,
+            pagesize:10,
+        };
+        $(function () {
+            var queryUrl = window.location.search;
+            var querypara = queryUrl.split("=");
+            para.id = querypara[1];
+            paras.id = querypara[1];
+            getwyinfo(para);
+            getgjlist(paras);
+
+        })
+        //获取物业详情
+        function getwyinfo(para) {
+            $.ajax({
+                url: '../json/wyinfo.json',//请求地址
+                type: 'POST', //GET
+                async: true,    //或false,是否异步
+                data: para,
+                dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (res) {
+                    console.log(res)
+                    if(res.code == 0){
+                        infodata = res.data;
+                        $("#address-name").text(infodata.areaName);
+                        var imglist = infodata.backImgs;
+                        var html = "";
+                        for(var i = 0;i<imglist.length;i++){
+                            html+="<div class='swiper-slide'>"+
+                            "<img src='"+imglist[i]+"' class='info-banner-img'>"+
+                            "</div>"
+                        }
+                        $(".swiper-wrapper").html(html)
+                        var swiper = new Swiper('.swiper-container', {
+                            loop : true,
+                            autoplay:2000,//自动播放
+                            pagination : '.swiper-pagination',//分页器
+                            freeMode: true,
+                            observer:true,
+                            observeParents:true,
+                        });
+                        var state = infodata.state;
+                        switch(state)
+                        {
+                            case 1:
+                                $("#address-state").text("可跟进");
+                                break;
+                            case 2:
+                                $("#address-state").text("跟进中");
+                                break;
+                            case 3:
+                                $("#address-state").text("可跟进");
+                                break;
+                            case 4:
+                                $("#address-state").text("已签单");
+                                break;
+                            case 5:
+                                $("#address-state").text("已放弃");
+                                break;
+                            default:
+                        }
+                        $("#link-name").text(infodata.callName);
+                        $("#link-phone").text(infodata.callNo);
+                        $("#aphone").attr("href","tel:"+infodata.callNo)
+                        $("#rate").text(infodata.jionRata);
+                        $("#ban").text(infodata.building);
+                        $("#unit").text(infodata.unit);
+                        $("#ggw").text(infodata.adqw !=""? infodata.adqw:"暂无");
+                        $("#rent").text(infodata.rentInfo !=""? infodata.rentInfo:"暂无");
+                        $("#occupancy").text(infodata.inCase !=""? infodata.inCase:"暂无");
+                        $("#environmental").text(infodata.aroundInfo !=""? infodata.aroundInfo:"暂无");
+                        $("#overtime").text(infodata.overTimeInfo !=""? infodata.overTimeInfo:"暂无");
+                    }
+                },
+                error: function (res) {
+                    layer.msg("加载失败");
+                },
+            })
+        }
+
+        function getgjlist(para) {
+            $.ajax({
+                url: '../json/gjlist.json',//请求地址
+                type: 'POST', //GET
+                async: true,    //或false,是否异步
+                data: para,
+                dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (res) {
+                    console.log(res)
+                    if(res.code == 0){
+                       var gjlist = res.data.list;
+                       var html = "";
+                       var zwhtml = "";
+                       if(gjlist.length > 0){
+                           for(var i = 0;i<gjlist.length;i++){
+                               var type = gjlist[i].type;
+                               switch(type)
+                               {
+                                   case 1:
+                                       zwhtml = "<span class='zw'>(招商专员)</span>"
+                                       break;
+                                   case 2:
+                                       zwhtml = "<span class='zw'>(店长)</span>"
+                                       break;
+                                   default:
+                               }
+                               html +="<div class='flex flex-column gj-info-list'>"+
+                                   "<div class='flex flex-row flex-space flex-centerss'>"+
+                                   "<span>"+gjlist[i].name+zwhtml+"</span>"+
+                                   "<a href='tel:"+gjlist[i].phone+"'><img src='../image/phone-icon.png'  class='phone-icon'></a>"+
+                                   "</div>"+
+                                   "<div class='flex flex-row flex-space gj-time'>"+
+                                   "<span>"+gjlist[i].time+"</span>"+
+                               "</div>"+
+                               "<div class='flex flex-row flex-space gj-content'>"+
+                                   "<span>"+gjlist[i].detail+"</span>"+
+                               "</div>"+
+                               "</div>"
+                           }
+                           $(".gj-info").html(html)
+                       }
+
+                    }
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

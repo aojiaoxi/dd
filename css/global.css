@@ -1,0 +1,224 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+	margin: 0;
+	padding: 0;
+}
+
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+address,
+figure,
+figcaption,
+menu,
+details {
+	display: block;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html,body{
+	height: 100%;
+}
+caption,
+th {
+	text-align: left;
+	font-weight: normal;
+}
+
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+	border: 0;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+	font-style: normal;
+}
+
+[hidefocus],
+summary {
+	outline: 0;
+}
+
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+	font-size: 100%;
+}
+
+sup,
+sub {
+	font-size: 83%;
+}
+q:before,
+q:after {
+	content: none;
+}
+
+textarea {
+	overflow: auto;
+	resize: none;
+}
+
+label,
+summary {
+	cursor: default;
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+	font-weight: normal;
+}
+
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+	text-decoration: none;
+}
+
+body,
+textarea,
+input,
+button,
+select,
+keygen,
+legend {
+	font-size: 14px;
+	color: #303030;
+	outline: 0;
+}
+
+body {
+	background: #fff;
+}
+
+a,
+a:hover {
+	color: #303030;
+}
+
+body {
+	font-family: 'Microsoft YaHei';
+}
+
+
+/*头部*/
+
+header {
+	width: 100%;
+	margin: 0 auto;
+	/*line-height: 4rem;*/
+	font-size: 1.4rem;
+	background-color: rgba(66, 65, 70, 1);
+	/*padding-bottom: 1rem;*/
+}
+
+header nav .active {
+	color: #FFFFFF;
+	background-color: #ffc800;
+}
+
+header nav a {
+	padding: .1rem .3rem;
+}
+
+.header-ul li {
+	float: left;
+	margin-left: 1rem;
+}
+
+.header-li {
+	position: relative;
+}
+
+.header-li ul {
+	display: none;
+	position: absolute;
+	right: -.67rem;
+	top: 2.75rem;
+	width: 14rem;
+	z-index: 99;
+	background-color: #424146;
+}
+.header-li ul li a {
+   color: #fff;
+}
+.header-li ul li {
+	text-align: center;
+	width: 100%;
+	margin-left: 0;
+	line-height: 4rem;
+	border-bottom: solid 0.1px #8c8b8d;
+	position: relative;
+}
+
+.am-slider-default {
+	margin: 0 0 .3rem;
+}

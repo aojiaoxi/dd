@@ -1,0 +1,32 @@
+{
+  "code": 0,
+  "msg": "获取成功",
+  "data":
+  {
+    "id": 0,
+    "areaName": "U创空间萨德尔",
+    "sectionName": null,
+    "address": "重庆市江北区五江路18号工业设计中心",
+    "companyName": "",
+    "callNo": "13637925557",
+    "callName": "陈静",
+    "jionRata": 60,
+    "personcount": "300-500人左右",
+    "overTimeInfo": "晚上10：30左右",
+    "rentInfo": "",
+    "aroundInfo": "写字楼",
+    "consumerInfo": null,
+    "adqw": "",
+    "remake": null,
+    "state": 3,
+    "suggest": null,
+    "follower": null,
+    "backImgs":
+    [
+      "../image/demo3.jpg","../image/demo1.jpg","../image/demo2.jpg"
+    ],
+    "building": "4层",
+    "unit": "1",
+    "inCase": "联合办公空间"
+  }
+}
